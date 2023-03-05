@@ -3,33 +3,27 @@ import {
 	AnimatePresence,
 	br_large,
 	CenterAlignedColumnContainer,
+	GridContainer,
 	Text,
 } from "@bennyui/core";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import { BottomSheet } from "./draft-components";
+import { Outlet } from "react-router-dom";
+import SideBar from "./components/Sidebar/SideBar";
 
 function App() {
 	const [showBottomSheet, setShowBottomSheet] = useState(true);
 	return (
-		<>
-			<GlobalStyles />
-			<CenterAlignedColumnContainer
-				height="100vh"
-				width="100vw"
-				backgroundColor="lightblue"
-				borderRadius="0"
-			>
-				<Text color="white">This is the app</Text>
-				<AnimatePresence>
-					{showBottomSheet && (
-						<BottomSheet
-							bottomSheetContent={() => <BottomSheetContent />}
-							onClose={() => setShowBottomSheet(false)}
-						/>
-					)}
-				</AnimatePresence>
-			</CenterAlignedColumnContainer>
-		</>
+		<GridContainer
+			width="100vw"
+			height="100vh"
+			backgroundColor="black"
+			borderRadius="0"
+			gridTemplateColumns="8vw 1fr"
+		>
+			<SideBar />
+			<Outlet />
+		</GridContainer>
 	);
 }
 
