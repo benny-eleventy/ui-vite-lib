@@ -16,7 +16,7 @@ function App() {
 			<CenterAlignedColumnContainer
 				height="100vh"
 				width="100vw"
-				backgroundColor="lightgreen"
+				backgroundColor="lightblue"
 				borderRadius="0"
 			>
 				<Text color="white">This is the app</Text>
