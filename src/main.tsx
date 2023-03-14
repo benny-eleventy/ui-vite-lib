@@ -6,6 +6,7 @@ import DraftComponent from "./draft-components/DraftComponent";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import Index from "./routes";
 import Components from "./routes/Components/Components";
+import IconConfig from "./Tests/IconConfig";
 
 const BrowserRouter = createBrowserRouter([
 	{
@@ -23,6 +24,10 @@ const BrowserRouter = createBrowserRouter([
 			{
 				path: "/components",
 				element: <Components />,
+			},
+			{
+				path: "/tests",
+				element: <IconConfig />,
 			},
 		],
 	},
